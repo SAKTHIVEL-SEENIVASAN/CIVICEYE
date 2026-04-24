@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="/static/images/logo.jpeg" class="logo">
+        <h1>Detection Result</h1>
+        <p class="tagline">AI Analysis Report</p>
+    </div>
+
+    <!-- RESULT CARD -->
+    <div class="card">
+
+        <h2>🛠 Issue Summary</h2>
+
+        <p><b>Potholes Detected:</b> {{data.potholes}}</p>
+
+        <p><b>Severity:</b> {{data.severity}}</p>
+
+        <p><b>Priority:</b> 
+            <span class="
+                {% if data.priority == 'HIGH' %}high
+                {% elif data.priority == 'MEDIUM' %}medium
+                {% else %}low
+                {% endif %}
+            ">
+                {{data.priority}}
+            </span>
+        </p>
+
+        <hr>
+
+        <h3>💰 Repair Estimation</h3>
+
+        <p><b>Estimated Cost:</b> ₹{{data.cost}}</p>
+        <p><b>Manpower Required:</b> {{data.manpower}}</p>
+
+        <hr>
+
+        <h3>📍 Location Details</h3>
+
+        <p><b>Latitude:</b> {{data.lat}}</p>
+        <p><b>Longitude:</b> {{data.lon}}</p>
+
+        <hr>
+
+        <h3>📤 Status</h3>
+
+        <p class="success">✔ Complaint Sent to Roads Department</p>
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="image-box">
+        <h3>📸 Detected Image</h3>
+        <img src="/{{data.image}}" class="result-img">
+    </div>
+
+    <br>
+
+    <a href="/" class="back-btn">⬅ Upload Another File</a>
+
+</div>
+
+</body>
+</html>

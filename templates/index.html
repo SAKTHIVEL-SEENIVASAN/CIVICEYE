@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CivicEye</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="/static/images/logo.jpeg" class="logo">
+        <h1>CivicEye</h1>
+        <p class="tagline">
+            AI-Based Pothole Detection & Automated Complaint System
+        </p>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="card">
+
+        <h2>Upload Evidence</h2>
+
+        <form action="/detect" method="post" enctype="multipart/form-data">
+
+            <input type="file" name="file" required>
+
+            <h3>Location Details</h3>
+
+            <input type="text" name="lat" id="lat" placeholder="Latitude" required>
+            <input type="text" name="lon" id="lon" placeholder="Longitude" required>
+
+            <button type="button" onclick="getLocation()">📍 Auto Detect Location</button>
+
+            <br><br>
+
+            <button type="submit" class="submit-btn">🚀 Detect & Report</button>
+
+        </form>
+
+    </div>
+
+    <!-- TEAM -->
+    <div class="team">
+
+        <h2>Project Team</h2>
+
+        <div class="members">
+
+            <div class="member">
+                <img src="/static/images/sakthivel.jpg.jpeg">
+                <p><b>Sakthivel S M</b></p>
+            </div>
+
+            <div class="member">
+                <img src="/static/images/harish.jpg.jpeg">
+                <p><b>Harish Kumar S</b></p>
+            </div>
+
+            <div class="member">
+                <img src="/static/images/logajothy.jpg.jpeg">
+                <p><b>Loga Jothy V</b></p>
+            </div>
+
+            <div class="member">
+                <img src="/static/images/akiladevi.jpg.jpeg">
+                <p><b>Akila Devi P</b></p>
+                <small>Project Guide</small>
+            </div>
+
+        </div>
+
+        <p class="college">
+            Department of AI & DS<br>
+            Achariya College of Engineering Technology
+        </p>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT FOR GPS -->
+<script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById("lat").value = position.coords.latitude;
+            document.getElementById("lon").value = position.coords.longitude;
+        });
+    } else {
+        alert("Geolocation not supported");
+    }
+}
+</script>
+
+</body>
+</html>

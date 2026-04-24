@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CivicEye Project Documentation</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background: #f5f7fa;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2a5298;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #1e1e1e;
+            color: #00ffcc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🚀 CivicEye: AI-Based Pothole Detection System</h1>
+
+<div class="section card">
+<h2>📌 Abstract</h2>
+<p>
+CivicEye is an AI-driven system that detects potholes from images and automatically generates complaints using geo-tagged data. The system reduces manual reporting and improves response time using deep learning and automation.
+</p>
+</div>
+
+<div class="section card">
+<h2>🎯 Objective</h2>
+<ul>
+<li>Detect potholes using AI</li>
+<li>Capture location using GPS</li>
+<li>Estimate severity, cost, and manpower</li>
+<li>Automatically send complaint to authorities</li>
+</ul>
+</div>
+
+<div class="section card">
+<h2>⚙️ System Architecture (Mermaid)</h2>
+
+<pre>
+graph TD
+
+A[User Uploads Image] --> B[Flask Backend]
+
+B --> C[YOLOv8 Model]
+C --> D[Detect Pothole]
+
+D --> E[Severity Calculation]
+E --> F[Priority Assignment]
+F --> G[Cost & Manpower Estimation]
+
+B --> H[GPS Input (Lat, Lon)]
+
+G --> I[Generate Complaint Template]
+
+H --> I
+
+I --> J[Send Email to Roads Department]
+
+J --> K[Display Result to User]
+</pre>
+
+</div>
+
+<div class="section card">
+<h2>🧠 Technologies Used</h2>
+<ul>
+<li>YOLOv8 (Deep Learning)</li>
+<li>Flask (Backend)</li>
+<li>OpenCV (Image Processing)</li>
+<li>HTML, CSS (Frontend)</li>
+<li>SMTP (Email Automation)</li>
+</ul>
+</div>
+
+<div class="section card">
+<h2>🔄 Workflow</h2>
+<ol>
+<li>User uploads pothole image</li>
+<li>System captures GPS location</li>
+<li>AI detects pothole using YOLO</li>
+<li>Severity is calculated</li>
+<li>Priority is assigned</li>
+<li>Cost and manpower estimated</li>
+<li>Complaint is generated</li>
+<li>Email is sent to authority</li>
+</ol>
+</div>
+
+<div class="section card">
+<h2>📊 Output</h2>
+<ul>
+<li>Pothole Count</li>
+<li>Severity Score</li>
+<li>Priority Level</li>
+<li>Estimated Cost</li>
+<li>Manpower Required</li>
+<li>Location Details</li>
+</ul>
+</div>
+
+<div class="section card">
+<h2>⚠️ Limitations</h2>
+<ul>
+<li>Currently supports only pothole detection</li>
+<li>Depends on image quality</li>
+<li>Requires GPS input</li>
+</ul>
+</div>
+
+<div class="section card">
+<h2>🚀 Future Scope</h2>
+<ul>
+<li>Multi-issue detection (garbage, water leak)</li>
+<li>Mobile app integration</li>
+<li>Government API integration</li>
+<li>Real-time monitoring</li>
+</ul>
+</div>
+
+<div class="section card">
+<h2>🎤 Conclusion</h2>
+<p>
+CivicEye provides a smart and automated solution for civic issue reporting using AI and GPS integration. It improves efficiency, transparency, and response time in urban infrastructure management.
+</p>
+</div>
+
+</body>
+</html>

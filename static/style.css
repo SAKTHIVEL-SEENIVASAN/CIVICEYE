@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+.main {
+    text-align: center;
+    padding: 30px;
+}
+
+.header .logo {
+    width: 80px;
+}
+
+.tagline {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.3);
+}
+
+.card input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: green;
+    font-size: 16px;
+}
+
+.team {
+    margin-top: 40px;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member {
+    margin: 15px;
+}
+
+.member img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.college {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.image-box {
+    margin-top: 20px;
+}
+
+.result-img {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.success {
+    color: limegreen;
+    font-weight: bold;
+}
+
+.high {
+    color: red;
+    font-weight: bold;
+}
+
+.medium {
+    color: orange;
+    font-weight: bold;
+}
+
+.low {
+    color: green;
+    font-weight: bold;
+}
